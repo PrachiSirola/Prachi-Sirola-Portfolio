@@ -27,6 +27,11 @@ app.get('/api/health', (_req, res) => {
 app.use('/api/contact', contactRouter);
 app.use(errorHandler);
 
-app.listen(env.port, () => {
-  console.log(`Portfolio backend running on http://localhost:${env.port}`);
-});
+// Vercel runs the exported app itself; only listen for local dev / self-hosting.
+if (!process.env.VERCEL) {
+  app.listen(env.port, () => {
+    console.log(`Portfolio backend running on http://localhost:${env.port}`);
+  });
+}
+
+export default app;
