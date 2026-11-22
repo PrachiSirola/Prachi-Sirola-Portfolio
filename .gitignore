@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# macOS metadata
+.DS_Store
+
+# Tool output
+graphify-out/

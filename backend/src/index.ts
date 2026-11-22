@@ -1,0 +1,32 @@
+import cors from 'cors';
+import express from 'express';
+import helmet from 'helmet';
+import { env } from './config/env.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import { contactRouter } from './routes/contactRoutes.js';
+
+const app = express();
+
+app.use(helmet());
+app.use(
+  cors({
+    origin: env.corsOrigins,
+    methods: ['GET', 'POST'],
+  })
+);
+app.use(express.json({ limit: '16kb' }));
+
+app.get('/api/health', (_req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    service: 'prachi-sirola-portfolio-backend',
+    timestamp: new Date().toISOString(),
+  });
+});
+
+app.use('/api/contact', contactRouter);
+app.use(errorHandler);
+
+app.listen(env.port, () => {
+  console.log(`Portfolio backend running on http://localhost:${env.port}`);
+});
