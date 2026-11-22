@@ -42,7 +42,12 @@ export function Navbar() {
           className="flex items-center gap-2 whitespace-nowrap font-sans text-xs font-semibold uppercase tracking-[0.22em] text-ink transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-terra"
           aria-label="Prachi Sirola Home"
         >
-          <span className="text-lg text-terra" aria-hidden="true">✳</span>
+          <span
+            className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-ink font-logo text-[19px] normal-case leading-none tracking-normal text-terra"
+            aria-hidden="true"
+          >
+            PS
+          </span>
           <span>{PERSONAL_INFO.role}</span>
         </a>
 

@@ -25,6 +25,7 @@ export default {
       fontFamily: {
         display: ['"Barlow Condensed"', 'system-ui', 'sans-serif'],
 hero: ['Anton', 'Impact', 'sans-serif'],
+        logo: ['"Abril Fatface"', 'Georgia', 'serif'],
 script: ['"Mrs Saint Delafield"', 'cursive'],
         serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

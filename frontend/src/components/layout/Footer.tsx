@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-ink/25">
       <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-5 px-5 py-8 sm:flex-row sm:px-8">
         <p className="text-center text-xs text-ink-500 sm:text-left">
-          <span className="font-serif text-lg text-ink">{PERSONAL_INFO.monogram}</span>
+          <span className="font-logo text-xl text-terra">{PERSONAL_INFO.monogram}</span>
           <span className="mx-3 text-ink/25">|</span>
           &copy; {year} {PERSONAL_INFO.name}. All rights reserved.
         </p>
