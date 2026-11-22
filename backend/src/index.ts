@@ -7,6 +7,9 @@ import { contactRouter } from './routes/contactRoutes.js';
 
 const app = express();
 
+// Behind Vercel's proxy: trust one hop so rate limiting sees the real client IP.
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(
   cors({
